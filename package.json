@@ -1,0 +1,48 @@
+{
+  "name": "vue-hot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config config/webpack.config.js",
+    "dev"  : "node hot-dev-server.js",
+    "jsdoc": "jsdoc -u tutorials -c config/jsdoc.json -P package.json --readme README.md"  
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "babel-register": "^6.0.0",
+    "js-yaml": "^3.7.0",
+      
+    "css-loader": "^0.26.1",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.24.1",
+    "js-yaml": "^3.7.0",
+    "json-loader": "^0.5.4",
+    "less": "^2.5.1",
+    "less-loader": "^2.2.0",
+    "morgan": "^1.5.2",
+    "sass-loader": "^1.0.2",
+    "style-loader": "^0.12.3",
+    "url-loader": "^0.5.7",  
+      
+    "vue-template-compiler": "^2.1.0",  
+    "vue-loader": "^10.0.0",
+    
+    "morgan": "^1.5.2",  
+    "express": "^4.12.3",  
+    "webpack": "^1.8.11",
+    "webpack-dev-middleware": "^1.0.11",
+    "webpack-hot-middleware": "^2.13.2",
+    "jsdoc": "^3.4.0"  
+  },
+  "dependencies": {
+    "vue": "^2.1.6"
+  }
+}

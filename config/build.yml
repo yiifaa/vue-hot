@@ -1,0 +1,13 @@
+#   build info
+build:
+  dist:  ./dist
+  src:   ./client
+
+dev:
+  debug: true
+  port:  80
+  
+web:
+  public: /dist/
+  
+  
