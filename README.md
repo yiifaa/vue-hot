@@ -18,6 +18,10 @@ Webpack热加载模板，实现编辑即所见效果。
 
 ## 3. 运行方式
 ```bash
+#   安装jsdoc库
+npm install jsdoc -g
+#   安装webpack
+npm install webpack -g
 #   启动调试模式
 npm run dev
 #   启动生产模式
