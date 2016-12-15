@@ -5,7 +5,7 @@
   },
 
   "source": {
-    "include": ["es6/", "index.js"],
+    "include": ["client/"],
     "includePattern": ".+\\.js(doc)|es6?$",
     "excludePattern": "(^|\\/|\\\\)_"
   },

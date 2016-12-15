@@ -9,5 +9,6 @@ dev:
   
 web:
   public: /dist/
+  libPath: node_modules
   
   

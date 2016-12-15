@@ -3,11 +3,12 @@ var http = require('http'),
     configs = require('./config'),
     devConfig = configs.dev,
     public = configs.web.public,
+    libPath = configs.web.libPath,
     root = configs.context,
     app = express();
 
 app.use(require('morgan')('short'));
-app.use('/node_modules', express.static('node_modules'));
+app.use(public + libPath, express.static(libPath));
 
 //  准备编译
 var webpack = require('webpack'),
@@ -29,8 +30,9 @@ app.use(require("webpack-hot-middleware")(compiler, {
 
 //  单页面应用
 app.get("/", function(req, res) {
-  res.sendFile(root + '/index.html');
+  res.sendFile(root + '/dist/index.html');
 });
+
 //  提供主文件入口
 app.get('/index.js', (req, res) => {
     res.sendFile(root + '/index.js')

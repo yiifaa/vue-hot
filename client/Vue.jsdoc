@@ -1,0 +1,38 @@
+/**
+ * Vue命名空间，用于管理Vue的静态方法、实例方法、指令及组件等
+ * @namespace 
+ */
+var Vue = {
+    /**
+     * 用于存放静态方法
+     * @namespace
+     */
+    method : {
+    
+    },
+    
+    /**
+     * 用于存放实例方法
+     * @namespace
+     */
+    $method : {
+    
+    },
+    
+    /**
+     *  用于存放指令
+     *  @namespace
+     */
+    directive : {
+    
+    },
+    
+     /**
+     *  用于存放组件
+     * @namespace
+     */
+    component : {
+    
+    }
+    
+}

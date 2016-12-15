@@ -1,0 +1,10 @@
+{
+    "component": {
+        "title" : "系统通用组件使用说明",
+        "children": {
+            "component-message" : {
+                "title" : "国际化组件"
+            }
+        }
+    }
+}

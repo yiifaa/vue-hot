@@ -1,14 +1,13 @@
 let path = require('path'),
     webpack = require('webpack'),
     configs = require('./index'),
-    root = __dirname,
-    context = path.resolve(root, '../client')
-
+    HtmlWebpackPlugin = require('html-webpack-plugin')
+console.log(path.resolve(configs.src, './index.es6'))
 module.exports = {
     //context,
     
     entry : {
-        main : ['./client/index.es6']
+        main : [path.resolve(configs.src, './index.es6')]
     },
     
     output : {
@@ -26,7 +25,7 @@ module.exports = {
             {
                 test: /\.es6$/,
                 loader: 'babel-loader',
-                include: context,
+                include: configs.src,
                 query : {
                     babelrc : true    
                 }
@@ -73,10 +72,33 @@ module.exports = {
         'vue'    : 'Vue'
     },
     
+    //
+    resolve : {
+        //  必须是绝对地址
+        alias : {
+            'apps' : path.resolve(configs.src, './apps'),
+            'i18n' : path.resolve(configs.src, './i18n'),
+            'configs' : path.resolve(configs.src, './configs'),
+            'plugins' : path.resolve(configs.src, './plugins'),
+            'utils' : path.resolve(configs.src, './utils'),
+            'services' : path.resolve(configs.src, './services')
+        }
+    },
+    
      //  可以优化，添加到webpack.config.server.js中
     plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new HtmlWebpackPlugin({
+            title : 'Webpack Hot Reload Template',
+            filename : 'index.html',
+            inject : 'body',
+            template: 'template.ejs',
+            links: [{
+                href : 'dist/node_modules/bootstrap/dist/css/bootstrap.css',
+                rel : 'stylesheet'
+            }],
+            scripts: [
+                'dist/node_modules/vue/dist/vue.js'
+            ]
+        }),
     ]
 };
