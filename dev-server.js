@@ -31,7 +31,8 @@ app.use(require('morgan')('short'))
 //  启动中间件
 //  激活开发中间件
 app.use(require("webpack-dev-middleware")(compiler, {
-    noInfo: true,    
+    noInfo: true,
+    quiet: true,
     //  必不可少
     publicPath: '/static/'
 }));

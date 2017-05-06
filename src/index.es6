@@ -2,4 +2,4 @@ let add = function(a, b) {
     return a + b
 }
 
-alert(add(7, 7))
+alert(add(7, 8))
