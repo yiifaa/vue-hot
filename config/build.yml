@@ -1,7 +1,7 @@
 #   build info
 build:
   dist:  ./dist
-  src:   ./client
+  src:   ./src
 
 dev:
   debug: true

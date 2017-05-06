@@ -2,7 +2,7 @@ let path = require('path'),
     webpack = require('webpack'),
     configs = require('./index'),
     HtmlWebpackPlugin = require('html-webpack-plugin')
-console.log(path.resolve(configs.src, './index.es6'))
+
 module.exports = {
     //context,
     
